@@ -1,3 +1,8 @@
+# Load Balancing by HAPROXY
+This Project is setup Haproxy  box with two backend nodes.
+To setup this you need to change vagranfile config. In this i have two boxes **Test** & **Test1** . you need to assign diff. IPs to both boxes.
+Tip (change the memory for Test1 box. It will help to make your machine run smooth )
+  
 ## VagrantFile config.
 ```Vagrant.configure("2") do |config|
   config.vm.define "test" do |test|
