@@ -97,10 +97,7 @@ frontend Local_Server
 backend My_Web_Servers
     mode http
     balance roundrobin
-    option forwardfor
-    http-request set-header X-Forwarded-Port %[dst_port]
-    http-request add-header X-Forwarded-Proto https if { ssl_fc }
-    option httpchk HEAD / HTTP/1.1rnHost:localhost
+  
     server  1:  50.1.1.7:100
     server 2:  50.1.1.8:80 
    ```
